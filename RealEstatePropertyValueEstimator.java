@@ -1,8 +1,8 @@
 /*
-Assignment Number: 2
+Assignment Number: 3
 Assignment Title: Real Estate Property Value Estimator
 Program Author: Steve Defendre
-date due: 2023-09-28
+date due: 10/04/2023
 */
 
 import java.util.Scanner;
@@ -24,34 +24,34 @@ public class RealEstatePropertyValueEstimator {
         streetNumber = input.nextInt();
 
         System.out.print("Enter street name: ");
-        streetName = input.next();
+        streetName = input.nextLine();
 
         System.out.print("Enter living room name: ");
-        living = input.next();
+        living = input.nextLine();
 
         System.out.print("Enter area of " + living + " in sq. ft.: ");
         livingArea = input.nextInt();
 
         System.out.print("Enter dining room name: ");
-        dining = input.next();
+        dining = input.nextLine();
 
         System.out.print("Enter area of " + dining + " in sq. ft.: ");
         diningArea = input.nextInt();
 
         System.out.print("Enter first bedroom name: ");
-        bedroom1 = input.next();
+        bedroom1 = input.nextLine();
 
         System.out.print("Enter area of " + bedroom1 + " in sq. ft.: ");
         bedroom1Area = input.nextInt();
 
         System.out.print("Enter second bedroom name: ");
-        bedroom2 = input.next();
+        bedroom2 = input.nextLine();
 
         System.out.print("Enter area of " + bedroom2 + " in sq. ft.: ");
         bedroom2Area = input.nextInt();
 
         System.out.print("Enter kitchen name: ");
-        kitchen = input.next();
+        kitchen = input.nextLine();
 
         System.out.print("Enter area of " + kitchen + " in sq. ft.: ");
         kitchenArea = input.nextInt();
@@ -64,11 +64,12 @@ public class RealEstatePropertyValueEstimator {
         estimatedValue = totalArea * pricePerSqFt;
 
         // Display the results
-        System.out.println("\n1.                   Street: " + streetName + " #" + streetNumber);
-        System.out.println("2.              Total Rooms: 5 (" + living + ", " + dining + ", " + bedroom1 + ", " + bedroom2 + ", " + kitchen + ")");
-        System.out.println("3.               Total Area: " + totalArea + " sq. ft.");
-        System.out.println("4.         Price per sq. ft: $" + pricePerSqFt);
-        System.out.println("5. Estimated property value: $" + estimatedValue);
+        int lineCount = 1;
+        System.out.println(lineCount++ + ".                   Street: " + streetName + " #" + streetNumber);
+        System.out.println(lineCount++ + ".              Total Rooms: 5 (" + living + ", " + dining + ", " + bedroom1 + ", " + bedroom2 + ", " + kitchen + ")");
+        System.out.println(lineCount++ + ".               Total Area: " + totalArea + " sq. ft.");
+        System.out.println(lineCount++ + ".         Price per sq. ft: $" + pricePerSqFt);
+        System.out.println(lineCount++ + ". Estimated property value: $" + estimatedValue);
 
         input.close();
 
